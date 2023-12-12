@@ -8,16 +8,16 @@
 
 </head>
 <body>
+<form action="connecter.php" method="post">
+    <label for="membre">Sélectionnez un membre :</label>
+    <select name="membre" id="membre">
+        <?php foreach ($members as $member): ?>
+        <option value="<?php echo $member['id']; ?>"><?php echo $member['nom']; ?></option>
+        <?php endforeach; ?>
+    </select>
+    <input type="submit" value="Afficher les détails">
+</form>
 
-
-<script>
-    <div id="phraseAffichee">Vous êtes à présent connecté !</div>
-
-    setTimeout(function() {
-    var element = document.getElementById("phraseAffichee");
-    element.innerHTML = "";
-}, 2000);
-</script>
 
 </body>
 </html>
