@@ -9,14 +9,15 @@
 </head>
 <body>
 <form action="connecter.php" method="post">
-    <label for="membre">Sélectionnez un membre :</label>
-    <select name="membre" id="membre">
-        <?php foreach ($members as $member): ?>
-        <option value="<?php echo $member['id']; ?>"><?php echo $member['nom']; ?></option>
-        <?php endforeach; ?>
+    <label>Selectionner un utilisateur</label>
+    <input name="user" id="user" type="number" />
+    <th scope="col">  <label for="user-select"> 3D ?:</label> </th>
+    <td><select name="troisD" id="user-select" >
+        
     </select>
-    <input type="submit" value="Afficher les détails">
-</form>
+
+
+
 
 
 </body>
